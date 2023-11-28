@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <style>
+        body {
+          background-color:pink;
+        }
+    </style>
+</head>
+<body bgcolor="coral">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">BloodBank</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href='/getUsers'">Blood Donors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href='/donateBlood'">Donate Blood</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/getBestMatch">Blood Donors in your Area</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<h1>WE ARE HERE TO FILL UP THE GAP BETWEEN A BLOOD DONOR AND A PERSON IN NEED</h1>
+<!-- a href='/donateBlood'>Become A BLOOD DONOR</a>
+<a href='/getUsers'>LOOK FOR BLOOD DONOR</a-->
+<button onclick="document.location='/donateBlood'">Become A BLOOD DONOR</button>
+<button onclick="document.location='/getUsers'">LOOK FOR BLOOD DONOR</button>
+</body>
+</html>

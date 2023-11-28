@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Bank</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">BloodBank</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/getUsers}">Blood Donors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/donateBlood}">Donate Blood</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/getBestMatch}">Blood Donors in your Area</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <h1>List Of Blood Donors</h1>
+    </div>
+
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Blood Group</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each = "bloodBank: ${bloodBank}" >
+            <td th:text="${bloodBank.fName}"></td>
+            <td th:text="${bloodBank.bloodGroup}"></td>
+            <td th:text="${bloodBank.email}"></td>
+            <td th:text="${bloodBank.contact}"></td>
+            <td th:text="${bloodBank.country}"></td>
+            <td th:text="${bloodBank.state}"></td>
+            <td th:text="${bloodBank.city}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
